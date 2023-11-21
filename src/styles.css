@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+.barrenavdroite li {
+  display: inline-block; /* Afficher les éléments côte à côte */
+  margin-right: 10px; /* Ajouter un espace entre les éléments */
+}
+
+.barrenavdroite li a {
+  font-weight: bold; /* Texto em negrito */
+  color: black; /* Cor do texto preto */
+  display: block; /* Faz os itens ficarem lado a lado */
+  margin-bottom: 5px; /* Adiciona um espaço entre os itens */
+}
