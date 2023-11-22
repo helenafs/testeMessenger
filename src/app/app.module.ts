@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ResetPasswordPageComponent } from './reset-password-page/reset-password-page.component';
-import { ConversationPageComponentComponent } from './conversation-page-component/conversation-page-component.component';
+import { ConversationPageComponent } from './conversation-page/conversation-page.component';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ConversationPageComponentComponent } from './conversation-page-componen
     NavbarComponent,
     LoginPageComponent,
     ResetPasswordPageComponent,
-    ConversationPageComponentComponent
+    ConversationPageComponent
+
   ],
   imports: [
     BrowserModule,
