@@ -9,3 +9,13 @@
   display: block; /* Rend les objets côte à côte*/
   margin-bottom: 5px; /* Ajouter un espace entre les éléments */
 }
+
+.degrade{
+  font-size: 65px;
+      font-weight: bold;
+      background-image: linear-gradient(to right, #006AFF, #A334FA, #FF6968);
+      -webkit-background-clip: text; /* Webkit */
+      -webkit-text-fill-color: transparent; /* Webkit */
+      background-clip: text; /* Standard */
+
+}
