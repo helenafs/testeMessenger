@@ -16,7 +16,6 @@ import { ConversationPageComponent } from './conversation-page/conversation-page
     LoginPageComponent,
     ResetPasswordPageComponent,
     ConversationPageComponent
-
   ],
   imports: [
     BrowserModule,
