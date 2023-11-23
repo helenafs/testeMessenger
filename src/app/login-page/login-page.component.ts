@@ -32,6 +32,19 @@ export class LoginPageComponent {
     return motPasseInput.value.length >= 8 && motPasseInput.value.length <= 100 || (!motPasseInput.touched && !motPasseInput.dirty);
   }
 
+  buttonSeConnecter(emailInput:NgModel,motPasseInput:NgModel){
+    //voir si l'email et le mot de passe sont valides
+    return this.validateEmail(emailInput) && this.validateMotPasse(motPasseInput);
+  }
+
+  isValidForm(emailInput:NgModel,motPasseInput:NgModel) {
+    //voir si l'email et le mot de passe sont valides et si ils existent
+    //pour fairele button se connecter apparaitre juste quand il y a un mail et un mot de passe
+    return this.email && this.motPasse && this.buttonSeConnecter(emailInput,motPasseInput);
+  }
+
+
+
   enrigestreLogin() {
     //enregistre le login et mot de passe dans local storage
     const sauvegarderCheckbox = document.getElementById('sauvegarder') as HTMLInputElement;

@@ -15,7 +15,7 @@
       </div>
 
       <div class="uk-margin">
-        <a [routerLink]="['/conversation-page']" class="uk-button uk-button-primary" (click)="login()">Se connecter</a>
+        <button [disabled]="!isValidForm(emailInput,motPasseInput)" [routerLink]="['/conversation-page']" class="uk-button uk-button-primary"  (click)="login()">Se connecter</button>
         <a routerLink="/reset-password" class="uk-align-right">Mot de passe oublié ?</a>
       </div>
 
