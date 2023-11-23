@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { NgModel } from '@angular/forms';
+import * as CryptoJS from 'crypto-js';
 
 @Component({
   selector: 'app-login-page',
@@ -16,6 +17,7 @@ export class LoginPageComponent {
   }
 
   login() {
+    this.enrigestreLogin();
     console.log('Email:', this.email);
     console.log('motPasse:', this.motPasse);
   }
@@ -30,15 +32,44 @@ export class LoginPageComponent {
     return motPasseInput.value.length >= 8 && motPasseInput.value.length <= 100 || (!motPasseInput.touched && !motPasseInput.dirty);
   }
 
-  enrigestreLogin(){
-    //enregistre le email et mot de passe dans local storage
-    localStorage.setItem('email', this.email);
-    localStorage.setItem('motdePasse', this.motPasse);
-  }
+  enrigestreLogin() {
+    //enregistre le login et mot de passe dans local storage
+    const sauvegarderCheckbox = document.getElementById('sauvegarder') as HTMLInputElement;
+    if (sauvegarderCheckbox.checked) {
+      const encryptedPassword = CryptoJS.AES.encrypt(this.motPasse, 'motdepassecrypte').toString();
+      localStorage.setItem('email', this.email);
+      localStorage.setItem('motdePasse', encryptedPassword);
+    } else {
+      localStorage.removeItem('email');
+      localStorage.removeItem('motdePasse');
+    }
+}
 
-  /**
-   *
-   */
+ngOnInit() {
+  //carrega os dados email e login do local storage
+  this.loadLogin();
+}
+
+loadLogin() {
+  // Charge les données d'email et de mot de passe depuis le localStorage
+  const email = localStorage.getItem('email');
+  const motPasse = localStorage.getItem('motdePasse');
+
+  // Vérifie s'il y a des données dans le localStorage
+  if (email && motPasse) {
+    // Affecte les valeurs récupérées aux variables du composant
+    this.email = email;
+    this.motPasse = motPasse;
+  }
+}
+
+
+
+
+
+
+
+
 
 
 }
