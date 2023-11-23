@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  redirectionAlert(url: string) {
+    if (confirm('Vous serez redirigé hors de l\'application. Voulez-vous continuer?')) {
+      window.location.href = url;
+    }
+  }
 
 }
