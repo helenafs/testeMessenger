@@ -5,19 +5,22 @@
 
       <p>Grâce à Messenger, garder le contact avec vos proches n’a jamais été aussi facile et amusant.</p>
 
-      <div class="uk-margin-small">
-        <input class="uk-input" type="text" placeholder="Adresse e-mail ou mobile" maxlength="100">
+      <div class="uk-margin-small" id="email">
+        <input class="uk-input" type="email" placeholder="Adresse e-mail ou mobile" maxlength="100" name="email" [(ngModel)]="email" #emailInput="ngModel" required>
+        <small *ngIf="!validateEmail(emailInput)" class="uk-form-danger">Adresse Email incorrecte.</small>
       </div>
-      <div class="uk-margin-small">
-        <input class="uk-input" type="password" placeholder="Mot de passe" maxlength="100">
+      <div class="uk-margin-small" id="motPasse">
+        <input class="uk-input" type="password" placeholder="Mot de passe" maxlength="100" name="motPasse" [(ngModel)]="motPasse" #motPasseInput="ngModel" required>
+        <small *ngIf="!validateMotPasse(motPasseInput)" class="uk-form-danger">Le mot de passe doit contenir au moins 8 caractères. </small>
       </div>
+
       <div class="uk-margin">
-        <a href="/conversation-page" class="uk-button uk-button-primary">Se connecter</a>
+        <a [routerLink]="['/conversation-page']" class="uk-button uk-button-primary" (click)="login()">Se connecter</a>
         <a routerLink="/reset-password" class="uk-align-right">Mot de passe oublié ?</a>
       </div>
       <div class="uk-margin">
-        <input type="checkbox" id="resterConnecte">
-        <label for="resterConnecte">Rester connecté(e)</label>
+        <input type="checkbox" id="sauvegarder">
+        <label for="sauvegarder" (click)=" enrigestreLogin()">Sauvegarder e-mail et mot de passe ?</label>
       </div>
   </div>
 
