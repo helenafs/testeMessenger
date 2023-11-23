@@ -12,11 +12,10 @@ export class LoginPageComponent {
   public motPasse: string = '';
 
   constructor(private router: Router) {
-    // O Router está disponível para uso dentro deste componente
+    // Router disponible dans ce composant
   }
 
   login() {
-    // Aqui você pode adicionar a lógica para realizar o login com os dados fornecidos
     console.log('Email:', this.email);
     console.log('motPasse:', this.motPasse);
   }
@@ -27,7 +26,7 @@ export class LoginPageComponent {
   }
 
   validateMotPasse(motPasseInput: NgModel) {
-    // Deve conter entre 8 e 100 caracteres
+    // Doit contenir 8 et 100 caracteres
     return motPasseInput.value.length >= 8 && motPasseInput.value.length <= 100 || (!motPasseInput.touched && !motPasseInput.dirty);
   }
 
