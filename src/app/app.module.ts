@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ResetPasswordPageComponent } from './reset-password-page/reset-password-page.component';
 import { ConversationPageComponent } from './conversation-page/conversation-page.component';
+import { DefaultPageComponent } from './default-page/default-page.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ConversationPageComponent } from './conversation-page/conversation-page
     NavbarComponent,
     LoginPageComponent,
     ResetPasswordPageComponent,
-    ConversationPageComponent
+    ConversationPageComponent,
+    DefaultPageComponent
   ],
   imports: [
     BrowserModule,
