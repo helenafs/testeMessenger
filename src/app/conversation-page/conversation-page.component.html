@@ -1,40 +1,40 @@
+<!DOCTYPE html>
+<html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Messenger Conversas</title>
+  <script src="conversation-page.component.css"> </script>
 </head>
 
-  <div class="container">
-    <aside class="sidebar">
-      <!-- Lista de contatos ou conversas recentes -->
-      <ul class="conversation-list">
-        <li class="conversation">
-          <div class="contact-info">
-            <h3>Nome do Contato</h3>
-            <!-- Status online/offline -->
-          </div>
-          <div class="message-preview">
-            <p>Última mensagem enviada ou recebida</p>
-            <!-- Ícone indicando nova mensagem -->
-          </div>
-        </li>
-        <!-- Outros contatos/conversas -->
+<!-- conversation-page.component.html -->
+<div class="uk-container">
+  <div class="uk-grid uk-child-width-expand@s" uk-grid>
+    <!-- Barre de navigation -->
+    <div class="uk-width-auto uk-padding-remove uk-divider-vertical">
+      <ul class="uk-iconnav uk-iconnav-vertical uk-padding-remove"> 
+        <li class="uk-active uk-icon-button" (click)="toggleSection('comment')"><a uk-icon="icon: comment"></a></li>
+        <li class="uk-active uk-icon-button" (click)="toggleSection('users')"><a uk-icon="icon: users"></a></li>
       </ul>
-    </aside>
+    </div>
 
-    <main class="main-content">
-      <!-- Área para exibir mensagens da conversa -->
-      <div class="chat-area">
-        <!-- Mensagens da conversa serão exibidas aqui -->
+    <!-- Section de recherche et titre -->
+    <div class="uk-width-2-5@s uk-padding-remove uk-divider-vertical" *ngIf="currentSection === 'comment'">
+      <h2>Discussions</h2>
+      <!-- Barre de recherche -->
+      <div class="uk-margin">
+        <div class="uk-inline">
+          <span class="uk-form-icon" uk-icon="icon: search"></span>
+          <input class="uk-input uk-form-large uk-border-rounded uk-width-expand" type="text" placeholder="Rechercher dans Messenger...">
+        </div>
       </div>
+    </div>
 
-      <!-- Campo de entrada de mensagem -->
-      <div class="message-input">
-        <input type="text" placeholder="Digite sua mensagem...">
-        <button>Enviar</button>
-        <!-- Ícones para emojis, anexos, etc., podem ser adicionados aqui -->
-      </div>
-    </main>
+    <!-- Section de la conversation -->
+    <div class="uk-width-2-5@s uk-padding-remove uk-border-left">
+      <p>Aucune discussion sélectionnée</p>
+      <!-- Ajoute ici le code pour afficher les messages de la conversation -->
+        <!-- Utilise le composant ConversationPageComponent ou un autre composant dédié -->
+    </div>
   </div>
-</body>
+</div>
 
 
+</html>

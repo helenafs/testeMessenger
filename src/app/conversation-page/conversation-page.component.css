@@ -1,0 +1,22 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .uk-container {
+    margin: 0;
+    height: 100%;
+  }
+
+  .uk-grid {
+    margin-left: 0;
+    margin-right: 0;
+    height: 100%;
+  }
+
+  .vertical-line {
+    background-color: #221a1a; /* Couleur de la ligne */
+    width: 1px; /* Épaisseur de la ligne */
+    height: 100%; /* Hauteur de la ligne */
+  }

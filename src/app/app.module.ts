@@ -9,6 +9,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { ResetPasswordPageComponent } from './reset-password-page/reset-password-page.component';
 import { ConversationPageComponent } from './conversation-page/conversation-page.component';
 import { DefaultPageComponent } from './default-page/default-page.component';
+import { PersonnespageComponent } from './personnespage/personnespage.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { DefaultPageComponent } from './default-page/default-page.component';
     LoginPageComponent,
     ResetPasswordPageComponent,
     ConversationPageComponent,
-    DefaultPageComponent
+    DefaultPageComponent,
+    PersonnespageComponent
   ],
   imports: [
     BrowserModule,

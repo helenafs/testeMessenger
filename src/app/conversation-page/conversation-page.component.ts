@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./conversation-page.component.css']
 })
 export class ConversationPageComponent {
+  
+  currentSection: string = 'conversation';
 
+  toggleSection(section: string): void {
+    this.currentSection = section;
+  }
 }
