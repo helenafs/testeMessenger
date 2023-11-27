@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy,Component } from '@angular/core';
 
 @Component({
   selector: 'app-conversation-page',
@@ -12,4 +12,8 @@ export class ConversationPageComponent {
   toggleSection(section: string): void {
     this.currentSection = section;
   }
+  
+
+
+
 }

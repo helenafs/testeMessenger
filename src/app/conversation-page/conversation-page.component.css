@@ -1,22 +1,177 @@
+/* * {
+  box-sizing: border-box;
+}
+
+.header {
+  border: 1px solid red;
+  padding: 15px;
+}
+
+.menu {
+  width: 25%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+.main {
+  width: 75%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+.col-1 {width: 8.33%;
+  border: 1px solid red;}
+.col-2 {width: 16.66%;
+  border: 1px solid red;}
+.col-3 {width: 100%;
+  border: 1px solid red;}
+*/
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
+  margin: 0px;
+  padding: 0px;
 
-  .uk-container {
-    margin: 0;
-    height: 100%;
-  }
+}
 
-  .uk-grid {
-    margin-left: 0;
-    margin-right: 0;
-    height: 100%;
-  }
 
-  .vertical-line {
-    background-color: #221a1a; /* Couleur de la ligne */
-    width: 1px; /* Épaisseur de la ligne */
-    height: 100%; /* Hauteur de la ligne */
-  }
+
+.boxChats{
+overflow: auto;
+height: 700px;
+padding: 10px;
+border-radius: 30px;
+
+
+}
+article{
+border-radius: 20px;
+padding-bottom:10px;
+}
+
+article:hover{
+background-color: #CCCCCC;
+}
+
+
+
+
+.uk-container {
+  margin: 0;
+  height: 100%;
+}
+
+.uk-grid {
+  margin-left: 0;
+  margin-right: 0;
+  height: 100%;
+}
+
+.vertical-line {
+  background-color: #221a1a; /* Couleur de la ligne */
+  width: 1px; /* Épaisseur de la ligne */
+  height: 100%; /* Hauteur de la ligne */
+}
+
+.customPadding{
+  padding: 0;
+  margin: 0;
+  width: 70px;
+  border-style: dashed;
+}
+.heightIcons{
+  width: 65px;
+  height: 65px;
+  border: hidden;
+}
+.iconTile{
+  border-style: hidden;
+  border-radius: 15px;
+  padding: 6px;
+}
+
+.iconTile:hover{
+  background-color: #CCCCCC;
+  border-style: hidden;
+}
+button:hover {
+  background-color: #CCCCCC;
+  border-style: hidden;
+  border-radius: 15px;
+}
+img{
+  border-radius: 50px;
+}
+.navmargin{
+  margin-left: 65px;
+
+}
+.borderRound{
+  border-radius: 20px;
+}
+.WidthChatToggleSmall{
+  width: 100px;
+  
+}
+.WidthToggleLarge{
+  width: 470px;
+  padding-left: 10px;
+  height: 100%;
+  
+}
+.paddingleft{
+  padding-left: 10px;
+}
+
+
+.paddingright{
+  padding-right: 20px;
+}
+.avatarImage{
+  width: 30px;
+  height: 30px;
+}
+
+
+
+.chatNameLarge {
+  display:inline-block;
+  padding-left: 10px;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+
+
+
+.testCss{
+background-color: red;
+padding: 5px;
+margin: 0;
+height: 100vh;
+}
+.testCss1{
+background-color: blue;
+padding: 5px;
+margin: 0;
+height: 100vh;
+}
+.testCssNavVertical{
+background-color: grey;
+padding: 5px;
+margin: 0;
+height: 100vh;
+}
+
+
+.WidthChats{
+min-width:1350px;
+}
+@media (max-width:900px){
+
+
+}
+
+
+
+
