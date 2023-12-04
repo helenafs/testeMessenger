@@ -7,7 +7,7 @@
 
       <div class="uk-margin-small" id="email">
         <input class="uk-input" type="email" placeholder="Adresse e-mail ou mobile" maxlength="100" name="email" [(ngModel)]="email" #emailInput="ngModel" required>
-        <small *ngIf="!validateEmail(emailInput)" class="uk-form-danger">Adresse Email incorrecte.</small>
+        <small *ngIf="!validateEmail(emailInput)" class="uk-form-danger">Adresse Email incorrecte, saisir un e-mail dans le  format xxx@xxx.xxx.</small>
       </div>
       <div class="uk-margin-small" id="motPasse">
         <input class="uk-input" type="password" placeholder="Mot de passe" maxlength="100" name="motPasse" [(ngModel)]="motPasse" #motPasseInput="ngModel" required>
