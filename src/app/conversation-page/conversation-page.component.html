@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <script src="conversation-page.component.css"> </script>
 </head>
 
-
-<!-- conversation-page.component.html -->
-
-
- <!-- Barre de navigation -->
-
- <div class="uk-section uk-section-small uk-section-muted uk-position-left customPadding">
-  <div class="uk-container-small">
-    <ul class="uk-container uk-iconnav uk-iconnav-vertical " > 
-      <button class="uk-button  uk-icon-button uk-button-default customPadding heightIcons" (click)="toggleSection('chats')" uk-icon="icon: comment; ratio: 2"></button>
-      <button class="uk-button uk-icon-button uk-button-default customPadding heightIcons" (click)="toggleSection('people')" uk-icon="icon: users; ratio: 2"></button>
-      <button class="uk-button uk-icon-button uk-button-default  customPadding heightIcons" (click)="toggleSection('marketplace')" uk-icon="icon: bag; ratio: 2"></button>
-      <button class="uk-button uk-icon-button uk-button-default  customPadding heightIcons" (click)="toggleSection('requests')" uk-icon="icon: mail; ratio: 2"></button>
-      <button class="uk-button uk-icon-button uk-button-default  customPadding heightIcons" (click)="toggleSection('archive')"  uk-icon="icon: history; ratio: 2"></button>
-    </ul>
-  </div>
-</div>
+<body style="text-align:center;">
+  <div id="main">
+    <div id="left">
 
 
+      <div class="conversation-page">
+        <!-- Barre de navigation -->
+
+        <div class="uk-section uk-section-small uk-section-muted uk-position-left customPadding">
+          <div class="uk-container-small">
+            <ul class="uk-container uk-iconnav uk-iconnav-vertical ">
+              <button class="uk-button  uk-icon-button uk-button-default customPadding heightIcons"
+                (click)="toggleSection('chats')" uk-icon="icon: comment; ratio: 2"></button>
+              <button class="uk-button uk-icon-button uk-button-default customPadding heightIcons"
+                (click)="toggleSection('people')" uk-icon="icon: users; ratio: 2"></button>
+              <button class="uk-button uk-icon-button uk-button-default  customPadding heightIcons"
+                (click)="toggleSection('marketplace')" uk-icon="icon: bag; ratio: 2"></button>
+              <button class="uk-button uk-icon-button uk-button-default  customPadding heightIcons"
+                (click)="toggleSection('requests')" uk-icon="icon: mail; ratio: 2"></button>
+              <button class="uk-button uk-icon-button uk-button-default  customPadding heightIcons"
+                (click)="toggleSection('archive')" uk-icon="icon: history; ratio: 2"></button>
+            </ul>
+          </div>
+        </div>
 
 
 
@@ -30,111 +36,122 @@
 
 
 
- <!-- Contents for vertical nav --hidden class="uk-hidden@s------------------------------------------------------>
 
 
-  <!-- Toggle Chats large-->
-  
-  <div class="uk-visible@l WidthToggleLarge navmargin" *ngIf="currentSection === 'chats'">
-    
-      <nav class="uk-navbar-container topPadding">
-            <div uk-navbar>
+        <!-- Contents for vertical nav --hidden class="uk-hidden@s------------------------------------------------------>
+        <div>
+
+          <!-- Toggle Chats large-->
+
+          <div class="uk-visible@l WidthToggleLarge navmargin" *ngIf="currentSection === 'chats'">
+
+            <nav class="uk-navbar-container topPadding">
+              <div uk-navbar>
                 <div class="uk-navbar-left">
-                    <ul class=" uk-navbar-left uk-navbar-nav">
-                        <li class="uk-active paddingleft"><h1> Discussions </h1></li>
-                    </ul>
+                  <ul class=" uk-navbar-left uk-navbar-nav">
+                    <li class="uk-active paddingleft">
+                      <h1> Discussions </h1>
+                    </li>
+                  </ul>
                 </div>
                 <div class="uk-navbar-right">
-                    <ul class="uk-navbar-nav">
-                        <li class="paddingright uk-active pad" ><a uk-icon="icon: pencil; ratio: 2"></a></li>
-                    </ul>
+                  <ul class="uk-navbar-nav">
+                    <li class="paddingright uk-active pad"><a uk-icon="icon: pencil; ratio: 2"></a></li>
+                  </ul>
                 </div>
-            </div>
-      </nav>
+              </div>
+            </nav>
 
-      <!-- Barre de recherche -->
-        <div class="uk-margin">
-            <div class=" paddingright uk-inline uk-width-expand@m">
+            <!-- Barre de recherche -->
+
+
+            <div class="">
+              <div class=" uk-inline uk-width-expand@m">
                 <span class="uk-form-icon " uk-icon="icon: search"></span>
-                <input class="  uk-input borderRound" type="text"  aria-label="Not clickable icon" placeholder="Rechercher dans Messenger..">
+                <input class="  uk-input borderRound" type="text" aria-label="Not clickable icon"
+                  placeholder="Rechercher dans Messenger..">
+              </div>
             </div>
-        </div>
             <!--Comments-->
-            <div class="boxChats">
-             
 
-              <article class="uk-comment">
-                  <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
-                  <span class="chatNameLarge">Helena</span>
-              
+            <div class="boxChat">
+              <article>
+                <img src="assets/userblue.png" width="70" height="70">
+                <span class="chatNameLarge">Helena</span>
               </article>
 
 
               <article class="uk-comment">
-                  <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
-                  <span class="chatNameLarge">Roihmatoun</span>
-
+                <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
+                <span class="chatNameLarge">Helena</span>
               </article>
 
 
               <article class="uk-comment">
-                  <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
-                  <span class="chatNameLarge">JeanChristo</span>
+                <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
+                <span class="chatNameLarge">Roihmatoun</span>
 
               </article>
 
 
               <article class="uk-comment">
-                  <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
-                  <span class="chatNameLarge">Sasha</span>
+                <img class=" " src="assets/userblue.png" width="70" height="70">
+                <span class="chatNameLarge">JeanChristo</span>
+
+              </article>
+
+
+              <article class="uk-comment">
+                <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
+                <span class="chatNameLarge">Sasha</span>
 
               </article>
 
               <article class="uk-comment">
-                  <img class="uk-comment-avatar " src="assets/userblue.png"width="70" height="70">
-                  <span class="chatNameLarge">Ahmed</span>
+                <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
+                <span class="chatNameLarge">Ahmed</span>
 
               </article>
 
-              <article class="uk-comment" >
-                  <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
-                  <span class="chatNameLarge">Alexandre</span>
+              <article class="uk-comment">
+                <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
+                <span class="chatNameLarge">Alexandre</span>
 
               </article>
 
-              <article class="uk-comment" >
-                  <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
-                  <span class="chatNameLarge">Messaoud</span>
+              <article class="uk-comment">
+                <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
+                <span class="chatNameLarge">Messaoud</span>
 
               </article>
 
-              
-              <article class="uk-comment" >
+
+              <article class="uk-comment">
                 <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
                 <span class="chatNameLarge">Simon</span>
 
-            </article>
+              </article>
 
-            
-            <article class="uk-comment" >
-              <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
-              <span class="chatNameLarge">Antoine</span>
 
-          </article>
+              <article class="uk-comment">
+                <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
+                <span class="chatNameLarge">Antoine</span>
 
-          
-          <article class="uk-comment" >
-            <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
-            <span class="chatNameLarge">Aurélien</span>
+              </article>
 
-          </article>
-           
-            <!--Comments-->
-        
+
+              <article class="uk-comment">
+                <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
+                <span class="chatNameLarge">Aurélien</span>
+
+              </article>
+
+              <!--Comments-->
+
             </div>
 
-        
-  </div>
+
+          </div>
 
 
 
@@ -144,139 +161,236 @@
 
 
 
-    <!-- Toggle Chats Small----------------------------->
-  <div class="WidthChatToggleSmall topPadding navmargin">
-    <div class="uk-hidden@l" *ngIf="currentSection === 'chats'">
-      <div class="uk-margin">
-        <div class="uk-inline">
-          <span class="uk-form-icon " uk-icon="icon: search"></span>
-          <input class="uk-input borderRound" type="text"  aria-label="Not clickable icon">
+          <!-- Toggle Chats Small----------------------------->
+          <div class="WidthChatToggleSmall topPadding navmargin">
+            <div class="uk-hidden@l" *ngIf="currentSection === 'chats'">
+              <div class="uk-margin">
+                <div class="uk-inline paddingleft">
+                  <span class="uk-form-icon paddingleft" uk-icon="icon: search"></span>
+                  <input class="uk-input borderRound paddingleft" type="text" aria-label="Not clickable icon">
+                </div>
+                <!--------------------------------COMMMMMMMMMENTS -->
+
+                <div class="boxChats ">
+
+                  <div id="avatar1" class="iconTile uk-tile uk-tile-muted ">
+                    <img src="assets/userblue.png" alt="description">
+                  </div>
+                  <div id="avatar2" class="iconTile uk-tile uk-tile-muted ">
+                    <img src="assets/userblue.png" alt="description">
+                  </div>
+                  <div id="avatar3" class="iconTile uk-tile uk-tile-muted ">
+                    <img src="assets/userblue.png" alt="description">
+                  </div>
+                  <div id="avatar4" class="iconTile uk-tile uk-tile-muted ">
+                    <img src="assets/userblue.png" alt="description">
+                  </div>
+                  <div id="avatar5" class="iconTile uk-tile uk-tile-muted ">
+                    <img src="assets/userblue.png" alt="description">
+                  </div>
+                  <div id="avatar6" class="iconTile uk-tile uk-tile-muted ">
+                    <img src="assets/userblue.png" alt="description">
+                  </div>
+
+                  <div id="avatar7" class="iconTile uk-tile uk-tile-muted ">
+                    <img src="assets/userblue.png" alt="description">
+                  </div>
+                  <div id="avatar8" class="iconTile uk-tile uk-tile-muted ">
+                    <img src="assets/userblue.png" alt="description">
+                  </div>
+                  <div id="avatar9" class="iconTile uk-tile uk-tile-muted ">
+                    <img src="assets/userblue.png" alt="description">
+                  </div>
+                  <div id="avatar10" class="iconTile uk-tile uk-tile-muted ">
+                    <img src="assets/userblue.png" alt="description">
+                  </div>
+                  <div id="avatar11" class="iconTile uk-tile uk-tile-muted ">
+                    <img src="assets/userblue.png" alt="description">
+                  </div>
+                  <div id="avatar12" class="iconTile uk-tile uk-tile-muted ">
+                    <img src="assets/userblue.png" alt="description">
+                  </div>
+                  <div id="avatar13" class="iconTile uk-tile uk-tile-muted ">
+                    <img src="assets/userblue.png" alt="description">
+                  </div>
+                  <div id="avatar14" class="iconTile uk-tile uk-tile-muted ">
+                    <img src="assets/userblue.png" alt="description">
+                  </div>
+                </div>
+                <!--------------------------------COMMMMMMMMMENTS -->
+              </div>
+            </div>
+
+
+          </div>
+
+
+
+
+
+          <!--------------- Toggle People ------------------->
+          <div class="WidthToggleLarge navmargin fullheight" *ngIf="currentSection === 'people'">
+
+            <nav class="uk-navbar-container topPadding">
+              <div uk-navbar>
+                <div class="uk-navbar-left">
+                  <ul class=" uk-navbar-left uk-navbar-nav">
+                    <li class="uk-active paddingleft">
+                      <h1> Personnes </h1>
+
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+            <p class="paddingMarginZero paddingleft"> Contacts actifs(3)</p>
+
+            <article class="uk-comment iconTile ">
+              <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
+              <span class="chatNameLarge">Simon</span>
+            </article>
+
+            <article class="uk-comment iconTile">
+              <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
+              <span class="chatNameLarge"> Louis </span>
+            </article>
+
+            <article class="uk-comment iconTile">
+              <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
+              <span class="chatNameLarge"> David </span>
+            </article>
+
+          </div>
+
+
+          <!-- Toggle marketplace -->
+          <div class="WidthToggleLarge  navmargin fullheight " *ngIf="currentSection === 'marketplace'">
+            <nav class="uk-navbar-container topPadding">
+              <div uk-navbar>
+                <div class="uk-navbar-left">
+                  <ul class=" uk-navbar-left uk-navbar-nav">
+                    <li class="uk-active paddingleft">
+                      <h1> Marketplace Chats</h1>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </nav>
+
+
+            <article>
+              <img src="assets/userblue.png" width="70" height="70">
+              <span class="chatNameLarge">Helena : Camera à vendre</span>
+            </article>
+
+
+
+
+
+          </div>
+
+
+          <!-- Toggle requests -->
+          <div class="WidthToggleLarge navmargin fullheight" *ngIf="currentSection === 'requests'">
+
+
+            <nav class="uk-navbar-container topPadding">
+              <div uk-navbar>
+                <div class="uk-navbar-left">
+                  <ul class=" uk-navbar-left uk-navbar-nav">
+                    <li class="uk-active paddingleft">
+                      <h1> Requests </h1>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+              <div class="rounded-container">
+                <div class="inner-element">
+                  <span>You may know</span>
+              
+
+                </div>
+                <div class="inner-element">
+                  <span>Spam</span>
+
+                </div>
+
+              </div>
+            </nav>
+
+            <span>You can open a message request for more info on who sent it. They won't be notified you opened it.</span>
+            <div class="boxChat">
+              <article class="uk-comment">
+                <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
+                <span class="chatNameLarge">Helena</span>
+              </article>
+
+              <article class="uk-comment">
+                <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
+                <span class="chatNameLarge">Helena</span>
+              </article>
+            </div>
+
+            <div>
+
+            </div>
+          </div>
+
+          <!-- Toggle archive -->
+          <div class="WidthToggleLarge navmargin fullheight" *ngIf="currentSection === 'archive'">
+
+
+            <nav class="uk-navbar-container topPadding">
+              <div uk-navbar>
+                <div class="uk-navbar-left">
+                  <ul class=" uk-navbar-left uk-navbar-nav">
+                    <li class="uk-active paddingleft">
+                      <h1> Archives </h1>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </nav>
+            <p class="inner-element-text">No messages found</p>
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
         </div>
-<!--------------------------------COMMMMMMMMMENTS -->
-
-  <div class="boxChats navmargin">
-
-  <div id="avatar1" class="iconTile uk-tile uk-tile-muted ">
-    <img  src="assets/pink.png" alt="description">
-  </div>
-  <div id="avatar2" class="iconTile uk-tile uk-tile-muted ">
-    <img src="assets/pink.png" alt="description">
-  </div>
-  <div id="avatar3" class="iconTile uk-tile uk-tile-muted ">
-    <img src="assets/pink.png" alt="description">
-  </div>
-  <div id="avatar4" class="iconTile uk-tile uk-tile-muted ">
-    <img src="assets/pink.png" alt="description">
-  </div>
-  <div id="avatar5" class="iconTile uk-tile uk-tile-muted ">
-    <img src="assets/pink.png" alt="description">
-  </div>
-  <div id="avatar6" class="iconTile uk-tile uk-tile-muted ">
-    <img src="assets/pink.png" alt="description">
-  </div>
-
-  <div id="avatar7" class="iconTile uk-tile uk-tile-muted ">
-    <img src="assets/pink.png" alt="description">
-  </div>
-  <div id="avatar8" class="iconTile uk-tile uk-tile-muted ">
-    <img src="assets/pink.png" alt="description">
-  </div>
-  <div id="avatar9" class="iconTile uk-tile uk-tile-muted ">
-    <img src="assets/pink.png" alt="description">
-  </div>
-  <div id="avatar10" class="iconTile uk-tile uk-tile-muted ">
-    <img src="assets/pink.png" alt="description">
-  </div>
-  <div id="avatar11" class="iconTile uk-tile uk-tile-muted ">
-    <img src="assets/pink.png" alt="description">
-  </div>
-  <div id="avatar12" class="iconTile uk-tile uk-tile-muted ">
-    <img src="assets/pink.png" alt="description">
-  </div>
-  <div id="avatar13" class="iconTile uk-tile uk-tile-muted ">
-    <img src="assets/pink.png" alt="description">
-  </div>
-  <div id="avatar14" class="iconTile uk-tile uk-tile-muted ">
-    <img src="assets/pink.png" alt="description">
-  </div>
-</div>
-<!--------------------------------COMMMMMMMMMENTS -->
-
-
-
 
       </div>
     </div>
-    
-
-</div>
- 
- 
-
+    <!------------------------------------------>
+    <div id="right">
+      <div class="WidthChats">
+        <app-chats>
 
 
-<!--------------- Toggle People ------------------->
-  <div class="WidthToggleLarge navmargin" *ngIf="currentSection === 'people'">
-    
-    
-    <div class="boxChats paddingleft">
-      <h2 class="paddingleft"> Personnes </h2>
-      <p class="paddingleft"> Contacts actifs(3)</p>
+        </app-chats>
 
-      <article class="uk-comment iconTile " >
-        <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
-        <span class="chatNameLarge">Simon</span>
-
-    </article>
-      <article class="uk-comment iconTile" >
-        <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
-        <span class="chatNameLarge"> Louis </span>
-
-    </article>
-      <article class="uk-comment iconTile" >
-        <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
-        <span class="chatNameLarge"> David </span>
-
-    </article>
-
-    </div>
-
-
-
-  </div>
-
-
-<!-- Toggle marketplace -->
-  <div class="WidthToggleLarge navmargin " *ngIf="currentSection === 'marketplace'">
-    <div class="boxChats paddingleft">
-      <h2 class="paddingleft">Marketplace </h2>
+      </div>
     </div>
   </div>
+</body>
+<style>
 
 
-<!-- Toggle requests -->
-  <div class="WidthToggleLarge  navmargin" *ngIf="currentSection === 'requests'">
-    <div class="boxChats paddingleft">
-      <h2 class="paddingleft"> Demandes </h2>
-    </div>
-  </div>
-
-<!-- Toggle archive -->
-  <div class="WidthToggleLarge navmargin" *ngIf="currentSection === 'archive'">
-    <div class="boxChats paddingleft">
-      <h2 class="paddingleft">Archiver</h2>
-    </div>
-  </div>
 
 
-<div uk-grid>
-<div class="uk-width-expand ">
-  <ul class="uk-position-top-right uk-position-right WidthChats uk-nav">
-    <article class="uk-comment">
-      <img class="uk-comment-avatar " src="assets/user.png" width="70" height="70">
-      <span class="chatNameLarge">Sasha</span>
-</article>
-  
-    
-</ul>
-</div>
+
+
+
+
+</style>
