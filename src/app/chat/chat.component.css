@@ -1,0 +1,28 @@
+.fullwidth{
+    width: 76vw;
+}
+#right {
+    display: flex;
+    float: right;
+    height: 100vh;
+    background-color: #6e2323;
+  }
+
+  
+
+  
+  .chatSmallDiscussions{
+    display: flex;
+    max-width: 770px;
+    min-width: 600px;
+    background-color: #6e2323;
+  }
+  .paddingMarginIcons{
+    padding: 5px;
+    padding-right: 20px;
+  }
+  .fontNav{
+    font-weight: bolder;
+    font-size: 20px;
+  }
+  

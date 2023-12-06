@@ -10,7 +10,8 @@ import { ResetPasswordPageComponent } from './reset-password-page/reset-password
 import { ConversationPageComponent } from './conversation-page/conversation-page.component';
 import { DefaultPageComponent } from './default-page/default-page.component';
 import { PersonnespageComponent } from './personnespage/personnespage.component';
-import { ChatsComponent } from './chats/chats.component';
+import { ChatComponent } from './chat/chat.component';
+
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ChatsComponent } from './chats/chats.component';
     ConversationPageComponent,
     DefaultPageComponent,
     PersonnespageComponent,
-    ChatsComponent
+    ChatComponent,
+
   ],
   imports: [
     BrowserModule,

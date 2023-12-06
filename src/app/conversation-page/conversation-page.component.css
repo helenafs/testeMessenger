@@ -47,11 +47,7 @@ html {
 
 }
 
-#right {
-  width: auto;
-  height: 100%;
 
-}
 
 .paddingMarginZero {
   margin: 0px;
@@ -153,7 +149,7 @@ img {
 }
 
 .WidthChatToggleSmall {
-  width: 100px;
+  width: 120px;
   height: 100%;
 
 }
@@ -186,8 +182,6 @@ img {
 
 
 .chatNameLarge {
-
-
   font-weight: normal;
   font-size: 20px;
 }
@@ -217,13 +211,6 @@ img {
 }
 
 
-.WidthChats {
-
-  color: #6e2323;
-  float: right;
-  background-color: grey;
-  height: 100vh;
-}
 
 .conversation-page {
   float: left;
@@ -268,4 +255,14 @@ img {
 }
 .fullheight{
   height: 100vh;
+}
+
+#right {
+  display: flex;
+
+  float: right;
+  height: 100vh;
+  background-color: #6e2323;
+
+
 }
