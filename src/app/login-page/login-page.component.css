@@ -1,0 +1,6 @@
+button.uk-button-primary {
+    background-color: blue; /* Couleur de fond bleue */
+    color: white; /* Couleur du texte blanc */
+    border-radius: 10px; /* Bords arrondis */
+    /* Ajoutez d'autres styles si nécessaire */
+}
