@@ -63,7 +63,7 @@
   width: 0;
   overflow: hidden;
   transition: width 0.3s;
-  background-color: white; /* Ajoutez ceci pour spécifier la couleur de fond */
+  background-color: white; 
 }
 
 .toggleMoreDetails.active {
@@ -72,15 +72,15 @@
 }
 
 .inputBar {
-  flex: 1; /* Utilisez tout l'espace disponible */
+  flex: 1; 
 }
 
 #stickyTop {
-  position: relative; /* Ajoutez ceci pour corriger le problème de superposition */
+  position: relative; 
 }
 
 .paddingMarginIcons {
-  padding-right: 320px; /* Ajoutez la largeur de la colonne détails */
+  padding-right: 320px; 
 }
 
 .profileImage {
@@ -96,7 +96,7 @@
 }
 
 .section h4 {
-  margin-bottom: 10px; /* Ajoutez un espacement en bas de la flèche */
+  margin-bottom: 10px; 
 }
 
 .subsection {
@@ -106,17 +106,17 @@
 
 .image-grid {
   display: flex;
-  flex-direction: column; /* Affichez les images en colonne */
+  flex-direction: column; 
 }
 
 .image-item {
-  padding: 5px; /* Ajoutez un espacement entre les images au besoin */
+  padding: 5px; 
 }
 
 .image-item img {
-  width: 100%; /* La largeur de l'image est de 100% de la largeur de son conteneur */
-  height: auto; /* La hauteur est ajustée proportionnellement pour éviter la distorsion */
-  max-width: 100%; /* Assurez-vous que l'image ne dépasse pas sa taille naturelle */
-  max-height: 100%; /* Assurez-vous que l'image ne dépasse pas sa taille naturelle */
+  width: 100%; 
+  height: auto; 
+  max-width: 100%; 
+  max-height: 100%; 
 }
 
