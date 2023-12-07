@@ -1,64 +1,94 @@
-<div class="chat uk-width-expand">
+<div class="chat-container uk-width-expand">
     <div>
         <nav id="stickyTop" class="inputBar fullwidth" uk-navbar>
-            <div class=" uk-navbar-left" uk-sticky>
-                <ul class="uk-navbar-nav ">
-
-                    <li class="uk-active ">
-                        <article class="uk-comment ">
-                            <img class="uk-comment-avatar " src="assets/userblue.png" width="60" height="60">
+            <div class="uk-navbar-left" uk-sticky>
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active">
+                        <article class="uk-comment">
+                            <img class="uk-comment-avatar" src="assets/userblue.png" width="60" height="60">
                             <span class="chatNameLarge fontNav">Simon</span>
                         </article>
                     </li>
-
-
                 </ul>
             </div>
 
-            <div class=" uk-navbar-right paddingMarginIcons">
-                <ul class="uk-navbar-nav ">
-                    <li class="uk-active  "><i uk-icon="icon: receiver; ratio: 1.2"></i></li>
-                    <li class="uk-active  "><i uk-icon="icon: camera; ratio: 1.2"></i></li>
-                    <li class="uk-active "><i (click)="toggleMoreDetails()" uk-icon="icon: more; ratio: 1.2"></i></li>
+            <div class="uk-navbar-right paddingMarginIcons">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><i uk-icon="icon: receiver; ratio: 1.2"></i></li>
+                    <li class="uk-active"><i uk-icon="icon: camera; ratio: 1.2"></i></li>
+                    <li class="uk-active"><i (click)="toggleMoreDetails()" uk-icon="icon: more; ratio: 1.2"></i></li>
                 </ul>
             </div>
         </nav>
 
-
-
-
-
-
         <div id="stickyBottom" class="zeroPadMargin fullwidth" uk-sticky="position: bottom">
-
             <nav class="inputBar fullwidth" uk-navbar>
-                <ul class="uk-navbar-nav ">
-                    <li class="uk-active "><a class="inputbar" uk-icon="icon: plus-circle; ratio: 1.2"></a></li>
-                    <li class="uk-active "><a class="inputbar" uk-icon="icon: image; ratio: 1.2"></a></li>
-                    <li class="uk-active "><a class="inputbar" uk-icon="icon: folder; ratio: 1.2"></a></li>
-                    <li class="uk-active "><a class="inputbar" uk-icon="icon: happy; ratio: 1.2"></a></li>
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a class="inputbar" uk-icon="icon: plus-circle; ratio: 1.2"></a></li>
+                    <li class="uk-active"><a class="inputbar" uk-icon="icon: image; ratio: 1.2"></a></li>
+                    <li class="uk-active"><a class="inputbar" uk-icon="icon: folder; ratio: 1.2"></a></li>
+                    <li class="uk-active"><a class="inputbar" uk-icon="icon: happy; ratio: 1.2"></a></li>
                 </ul>
                 <div class="pad">
                     <input class="uk-search-input inputbar inputText uk-width-large " type="search" placeholder="Aa">
                 </div>
-                <ul class="uk-navbar-nav ">
-                    <li class="uk-active pad "><a class="inputbar" uk-icon="icon: heart; ratio: 1.2"></a></li>
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active pad"><a class="inputbar" uk-icon="icon: heart; ratio: 1.2"></a></li>
                 </ul>
             </nav>
         </div>
 
-
-
-        <div *ngIf="isMoreDetailsVisible" class="toggleMoreDetails">
-            <h1>fdsgfhg</h1>
+        <div *ngIf="isMoreDetailsVisible" class="toggleMoreDetails active">
+            <div class="detailsColumn">
+                <div style="background-color: white; padding: 20px;">
+        
+                    <!-- Profil avec une image icône -->
+                    <div class="profileSection">
+                        <img src="assets/userblue.png" alt="Profil Image" class="profileImage">
+                        <span> Simon </span>
+                    </div>
+        
+                    <div class="section">
+                        <h4>Contenus multimédias, fichiers et liens</h4>
+                        <i class="arrow-icon" (click)="toggleSection('multimedia')" uk-icon="icon: chevron-down"></i>
+                        <div *ngIf="isMultimediaSectionOpen">
+                            <!-- Sous-section Contenu multimédia -->
+                            <div class="subsection">
+                                <h5>Contenu multimédia</h5>
+                                <div class="image-grid">
+                                    <div class="image-item">
+                                        <img src="assets/larun.jpg" alt="Image 1">
+                                    </div>
+                                    <div class="image-item">
+                                        <img src="assets/maurice.jpg" alt="Image 2">
+                                    </div>
+                                    <div class="image-item">
+                                        <img src="assets/recife.jpg" alt="Image 3">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Sous-section Fichiers -->
+                            <div class="subsection">
+                                <h5>Fichiers</h5>
+                                <!-- Contenu de la sous-section fichiers -->
+                                <p>Contenu des fichiers ici...</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+        
+                    <div class="section">
+                        <h4>Confidentialité et assistance</h4>
+                        <i (click)="toggleSection('confidentiality')" uk-icon="icon: chevron-down"></i>
+                        <div *ngIf="isConfidentialitySectionOpen">
+                            <!-- Contenu de la section confidentialité -->
+                            <p>Confidentialité et assistance ici...</p>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
 </div>
