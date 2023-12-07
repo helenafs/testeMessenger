@@ -1,6 +1,21 @@
 button.uk-button-primary {
-    background-color: blue; /* Couleur de fond bleue */
-    color: white; /* Couleur du texte blanc */
-    border-radius: 10px; /* Bords arrondis */
-    /* Ajoutez d'autres styles si nécessaire */
+    background-color: blue; 
+    color: white; 
+    border-radius: 10px; 
+    
+}
+
+
+.bigger-text {
+    font-size: 110px; 
+  
+}
+
+.degrade {
+    font-family: Calibre, Helvetica Neue, Segoe UI, Helvetica, Arial, Lucida Grande, sans-serif;
+}
+
+.text{
+  color: #595959;
+  font-size: 20px;
 }
