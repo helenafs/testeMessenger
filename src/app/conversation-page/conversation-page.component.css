@@ -155,10 +155,16 @@ img {
 }
 
 .WidthToggleLarge {
-  width: 40vh;
+  width: 325px;
   padding-left: 10px;
-  height: 100%;
+ 
 
+}
+.widthFixe{
+  width: 395px;
+  padding-left: 10px;
+
+  height: 100%;
 }
 
 .paddingleft {

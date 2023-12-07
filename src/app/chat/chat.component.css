@@ -1,28 +1,51 @@
 .fullwidth{
     width: 76vw;
 }
-#right {
+#righbght {
     display: flex;
     float: right;
     height: 100vh;
     background-color: #6e2323;
   }
+.inputText{
+  width: 500px;
+  height: 35px;
+  border-radius: 30px;
+}
+  
+.pad{
+  padding-left: 10px;
+  padding-right: 10px;
+  
+}
 
   
-
-  
-  .chatSmallDiscussions{
+  .chatSmallDiscussionskjh{
     display: flex;
     max-width: 770px;
     min-width: 600px;
     background-color: #6e2323;
   }
   .paddingMarginIcons{
-    padding: 5px;
+
     padding-right: 20px;
   }
   .fontNav{
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 20px;
   }
+  .inputBar{
+    padding: 0px;
+    margin:0px;
+   background-color: #CCCCCC;
+    height: 8vh;
+    display: flex;
+  align-items: center; /* Vertical centering */
+  justify-content: center;
+
+  }
+
   
+.center{
+    text-align: center;
+  }

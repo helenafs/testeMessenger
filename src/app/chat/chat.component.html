@@ -1,30 +1,64 @@
-<div class="chat fullwidth">
-    <nav class="uk-navbar-container fullwidth" uk-navbar>
-        <div class="uk-navbar-left">
-            <ul class="uk-navbar-nav ">
+<div class="chat uk-width-expand">
+    <div>
+        <nav id="stickyTop" class="inputBar fullwidth" uk-navbar>
+            <div class=" uk-navbar-left" uk-sticky>
+                <ul class="uk-navbar-nav ">
 
-                <li class="uk-active ">
-                    <article class="uk-comment ">
-                        <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
-                        <span class="chatNameLarge fontNav">Simon</span>
-                    </article>
-                </li>
+                    <li class="uk-active ">
+                        <article class="uk-comment ">
+                            <img class="uk-comment-avatar " src="assets/userblue.png" width="60" height="60">
+                            <span class="chatNameLarge fontNav">Simon</span>
+                        </article>
+                    </li>
 
 
-            </ul>
+                </ul>
+            </div>
+
+            <div class=" uk-navbar-right paddingMarginIcons">
+                <ul class="uk-navbar-nav ">
+                    <li class="uk-active  "><i uk-icon="icon: receiver; ratio: 1.2"></i></li>
+                    <li class="uk-active  "><i uk-icon="icon: camera; ratio: 1.2"></i></li>
+                    <li class="uk-active "><i (click)="toggleMoreDetails()" uk-icon="icon: more; ratio: 1.2"></i></li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+
+
+
+        <div id="stickyBottom" class="zeroPadMargin fullwidth" uk-sticky="position: bottom">
+
+            <nav class="inputBar fullwidth" uk-navbar>
+                <ul class="uk-navbar-nav ">
+                    <li class="uk-active "><a class="inputbar" uk-icon="icon: plus-circle; ratio: 1.2"></a></li>
+                    <li class="uk-active "><a class="inputbar" uk-icon="icon: image; ratio: 1.2"></a></li>
+                    <li class="uk-active "><a class="inputbar" uk-icon="icon: folder; ratio: 1.2"></a></li>
+                    <li class="uk-active "><a class="inputbar" uk-icon="icon: happy; ratio: 1.2"></a></li>
+                </ul>
+                <div class="pad">
+                    <input class="uk-search-input inputbar inputText uk-width-large " type="search" placeholder="Aa">
+                </div>
+                <ul class="uk-navbar-nav ">
+                    <li class="uk-active pad "><a class="inputbar" uk-icon="icon: heart; ratio: 1.2"></a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="uk-navbar-right paddingMarginIcons">
-            <ul class="uk-navbar-nav ">
-                <li class="uk-active  ">
-                    <a uk-icon="icon: receiver; ratio: 2"></a>
-                </li>
-                <li class="uk-active  ">
-                    <a uk-icon="icon: camera; ratio: 2"></a>
-                </li>
-                <li class="uk-active ">
-                    <a uk-icon="icon: more; ratio: 2"></a>
-                </li>
-            </ul>
+
+
+
+        <div *ngIf="isMoreDetailsVisible" class="toggleMoreDetails">
+            <h1>fdsgfhg</h1>
         </div>
-    </nav>
+    </div>
+
+
+
+
+
+
+
+
 </div>
