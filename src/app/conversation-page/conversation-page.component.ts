@@ -1,31 +1,44 @@
 import { ChangeDetectionStrategy,Component } from '@angular/core';
-
+import { ChatMessagesService } from '../chat-messages.service';
 @Component({
   selector: 'app-conversation-page',
   templateUrl: './conversation-page.component.html',
   styleUrls: ['./conversation-page.component.css']
 })
 export class ConversationPageComponent {
+  constructor(private chatService: ChatMessagesService){}
 
 
-  public personne : any[]=[];
+  searchTerm: string = '';
+  personne: string[] = ['Helena', 'Roihmatoun', 'Jean Christophe', 'Sasha', 'Ahmed', 'Alexandre', 'Eridge', 'Aurélien','Walid' ];
+  filteredPersonnes: string[] = [];
+  isSearching: boolean = false;
+  selectedPersonne: string = '';
+
+  selectPerson(person: string): void {
+    this.selectedPersonne = person;
+    this.chatService.selectPerson(person);
+  }
+
+  onSearch() {
+    this.filteredPersonnes = this.personne.filter(
+      name => name.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
+  }
+  onSearchInputChange() {
+    this.isSearching = this.searchTerm.length > 0;
+    this.onSearch();
+  }
+
+
+  
   currentSection: string = 'conversation';
 
   toggleSection(section: string): void {
     this.currentSection = section;
   }
-  constructor(){
-    this.personne.push('Helena');
-    this.personne.push('Roihmatoun');
-    this.personne.push('Jean Christophe');
-    this.personne.push('Sasha');
-    this.personne.push('Ahmed');
-    this.personne.push('Alexandre');
-    this.personne.push('Eridge');
-    this.personne.push('Raina');
-    this.personne.push('Aurélien');
-    this.personne.push('Olivier');
-  }
+
+
   
 
 

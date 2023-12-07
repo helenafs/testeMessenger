@@ -66,21 +66,32 @@
 
 
           <div class="">
-            <div class=" uk-inline uk-width-auto uk-width-expand@m">
+            <div class=" uk-inline  uk-width-expand@m">
               <span class="uk-form-icon " uk-icon="icon: search"></span>
-              <input class="  uk-input borderRound" type="text" aria-label="Not clickable icon"
-                placeholder="Rechercher dans Messenger..">
+              <input class="  uk-input borderRound" [(ngModel)]="searchTerm" type="text" aria-label="Not clickable icon"
+                placeholder="Rechercher dans Messenger.." (input)="onSearchInputChange()">
             </div>
           </div>
-          <!--Comments-->
+          <!--IS SEARCH-->
+          <div *ngIf="isSearching">
+            <div class="boxChat">
+              <article *ngFor="let person of filteredPersonnes" (click)="selectPerson(person)" >
+                <img src="assets/userblue.png" width="70" height="70">
+                <span class="chatNameLarge">{{person}}</span>
+              </article>
+              <!--IS NOT SEARCH-->
 
-          <div class="boxChat">
-            <article *ngFor="let name of personne">
-              <img src="assets/userblue.png" width="70" height="70">
-              <span class="chatNameLarge">{{name}}</span>
-            </article>
-            <!--Comments-->
+            </div>
+          </div>
+          <div *ngIf="!isSearching">
+            <div class="boxChat">
+              <article (click)="selectPerson(person)" *ngFor="let person of personne">
+                <img src="assets/userblue.png" width="70" height="70">
+                <span class="chatNameLarge">{{person}}</span>
+              </article>
 
+
+            </div>
           </div>
 
 

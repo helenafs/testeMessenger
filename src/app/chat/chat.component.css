@@ -36,6 +36,7 @@
   font-size: 20px;
 }
 
+
 .inputBar {
   padding: 0px;
   margin: 0px;
@@ -44,6 +45,12 @@
   display: flex;
   align-items: center; /* Vertical centering */
   justify-content: center;
+}
+.buttonSend{
+height:35px;
+width: 70px;
+border-radius:20px;
+
 }
 
 .center {
@@ -79,8 +86,11 @@
   position: relative; 
 }
 
-.paddingMarginIcons {
+.visible-style {
   padding-right: 320px; 
+}
+.hidden-style{
+  padding-right: 20px; 
 }
 
 .profileImage {
@@ -120,3 +130,56 @@
   max-height: 100%; 
 }
 
+
+.chat-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  max-width: 70%;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 8px;
+}
+
+.sent {
+  align-self: flex-end;
+  background-color: #0084ff;
+  color: white;
+  margin-right: 40px;
+}
+.notSent {
+  margin-left: 40px;
+  align-self: flex-start;
+  background-color: #60003b;
+  color: white;
+}
+
+.input-container {
+  display: flex;
+  margin-top: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-left: 8px;
+  padding: 8px;
+  background-color: #0084ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
