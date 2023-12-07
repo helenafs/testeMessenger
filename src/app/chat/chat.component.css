@@ -24,7 +24,7 @@
   display: flex;
   max-width: 770px;
   min-width: 600px;
-  background-color: #6e2323;
+  background-color: whitesmoke;
 }
 
 .paddingMarginIcons {
@@ -108,6 +108,9 @@ border-radius:20px;
 .section h4 {
   margin-bottom: 10px; 
 }
+.iconColor{
+  color:#a9618d
+}
 
 .subsection {
   width: 100%;
@@ -158,8 +161,8 @@ border-radius:20px;
 .notSent {
   margin-left: 40px;
   align-self: flex-start;
-  background-color: #60003b;
-  color: white;
+  background-color: #CCCCCC;
+  color: black;
 }
 
 .input-container {

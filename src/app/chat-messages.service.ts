@@ -10,15 +10,25 @@ export class ChatMessagesService {
   selectedPerson$ = this.selectedPersonSource.asObservable();
 
   private messages: { [key: string]: { content: string, sentByUser: boolean }[] } = {
-    'Helena': [ { content: 'Hello!', sentByUser: false },
-    { content: 'How are you?', sentByUser: true }],
+    'Helena': [ 
+      { content: 'Hello!', sentByUser: false },
+  { content: 'Hi there!', sentByUser: true },
+  { content: 'How are you?', sentByUser: false },
+  { content: 'I\'m doing well, thanks!', sentByUser: true },
+  { content: 'What have you been up to?', sentByUser: false },
+  { content: 'Not much, just working on some projects.', sentByUser: true },
+  ],
 
 
-
-
-
-    'Roihmatoun': [{ content: 'Hello Roi!', sentByUser: false },
-    { content: 'How are you b?', sentByUser: true }]
+    'Roihmatoun': [
+      { content: "Hey there!", sentByUser: false },
+      { content: "Hi! How are you today?", sentByUser: true },
+      { content: "I'm doing great, thanks for asking.", sentByUser: false },
+      { content: "Have you seen the latest movie?", sentByUser: true },
+      { content: "Yes, I watched it last weekend. It was awesome!", sentByUser: false },
+      { content: "I need to catch up on my movie list.", sentByUser: true },
+      { content: "Definitely! Let me know if you need recommendations.", sentByUser: false },
+  ]
   };
 
   getMessages(person: string): { content: string, sentByUser: boolean }[] {

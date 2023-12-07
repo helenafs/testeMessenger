@@ -13,7 +13,7 @@
     <div class="conversation-page">
       <!-- Barre de navigation -->
 
-      <div class="uk-section uk-section-small uk-section-muted uk-position-left customPadding">
+      <div class="uk-section uk-section-small uk-section-muted uk-position-left customPadding uk-box-shadow-medium">
         <div class="uk-container-small">
           <ul class="uk-container uk-iconnav uk-iconnav-vertical ">
             <button class="uk-button  uk-icon-button uk-button-default customPadding heightIcons"
@@ -43,13 +43,13 @@
 
         <!-- Toggle Chats large-->
 
-        <div class="uk-visible@l WidthToggleLarge navmargin" *ngIf="currentSection === 'chats'">
+        <div class="uk-visible@l widthDiscussions navmargin" *ngIf="currentSection === 'chats'">
 
-          <nav class="uk-navbar-container topPadding">
+          <nav class="uk-navbar-container topPadding ">
             <div uk-navbar>
               <div class="uk-navbar-left">
                 <ul class=" uk-navbar-left uk-navbar-nav">
-                  <li class="uk-active paddingleft">
+                  <li class="uk-active paddingleft ">
                     <h1> Discussions </h1>
                   </li>
                 </ul>
@@ -175,7 +175,7 @@
                 <div class="uk-navbar-left">
                   <ul class=" uk-navbar-left uk-navbar-nav">
                     <li class="uk-active ">
-                      <h1> Marketplace Chats</h1>
+                      <h1> Marketplace </h1>
                     </li>
                   </ul>
                 </div>

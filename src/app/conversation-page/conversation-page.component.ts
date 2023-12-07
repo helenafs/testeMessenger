@@ -32,7 +32,7 @@ export class ConversationPageComponent {
 
 
   
-  currentSection: string = 'conversation';
+  currentSection: string = 'chats';
 
   toggleSection(section: string): void {
     this.currentSection = section;
