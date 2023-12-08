@@ -79,7 +79,7 @@ article {
 }
 
 article:hover {
-  background-color: #CCCCCC;
+  background-color: #f0f0f0;
 }
 
 
@@ -126,12 +126,12 @@ article:hover {
 }
 
 .iconTile:hover {
-  background-color: #CCCCCC;
+  background-color: #d3d0d0;
   border-style: hidden;
 }
 
 button:hover {
-  background-color: #CCCCCC;
+  background-color: #d3d0d0;
   border-style: hidden;
   border-radius: 15px;
 }
@@ -161,6 +161,16 @@ img {
  
 
 }
+.heightF{
+  margin-top: 93vh;
+  width: 430px;
+  height: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+
+
+}
+
 .widthDiscussions{
   width: 400px;
 
@@ -189,6 +199,15 @@ img {
   width: 30px;
   height: 30px;
 }
+.try{
+  font-weight:normal;
+}
+.try:hover{
+background-color:#f0f0f0;
+border-radius: 10px;
+font-size: 26px;
+}
+
 
 
 
@@ -215,7 +234,7 @@ img {
 }
 
 .testCssNavVertical {
-  background-color: grey;
+  background-color: rgb(194, 193, 193);
   padding: 5px;
   margin: 0;
   height: 100vh;
@@ -258,7 +277,7 @@ img {
 }
 
 .inner-element:hover {
-  background-color: #CCCCCC;
+  background-color: #f0f0f0;
 }
 .inner-element-text{
   align-items: center; /* Center items vertically */
@@ -268,12 +287,13 @@ img {
   height: 100vh;
 }
 
+
 #right {
   display: flex;
 
   float: right;
   height: 100vh;
-  background-color: whitesmoke;
+  background-color: rgb(253, 251, 251);
 
 
 }

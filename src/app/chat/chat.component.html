@@ -2,7 +2,7 @@
     <div class="">
         <!--Top Nav Bar-->
 
-        <nav id="stickyTop" class="inputBar fullwidth" uk-navbar>
+        <nav id="stickyTop" class="inputBar fullwidth navColor" uk-navbar>
             <div class="uk-navbar-left" uk-sticky>
                 <ul class="uk-navbar-nav">
                     <li class="uk-active">
@@ -34,7 +34,7 @@
         <!--Bottom Input Bar-->
 
         <div id="stickyBottom" class="zeroPadMargin fullwidth"   >
-            <nav class="inputBar fullwidth" uk-navbar [ngClass]="{'visible-style': isMoreDetailsVisible, 'hidden-style': !isMoreDetailsVisible}" uk-sticky="position: bottom">
+            <nav class="inputBar fullwidth navColor" uk-navbar [ngClass]="{'visible-style': isMoreDetailsVisible, 'hidden-style': !isMoreDetailsVisible}" uk-sticky="position: bottom">
                 <ul class="uk-navbar-nav">
                     <li class="uk-active"><a class="inputbar uk-text-primary itemHover" uk-icon="icon: plus-circle; ratio: 1.2"></a></li>
                     <li class="uk-active"><a class="inputbar uk-text-primary itemHover" uk-icon="icon: image; ratio: 1.2"></a></li>
@@ -80,7 +80,7 @@
     <div *ngIf="selectedPerson">
         <div *ngIf="isMoreDetailsVisible" class="toggleMoreDetails active">
             <div class="detailsColumn">
-                <div style="background-color: white; padding: 20px;">
+                <div style="background-color: rgb(255, 255, 255); padding: 20px;">
 
                     <!-- Profil avec une image icône -->
                     <div class="profileSection">

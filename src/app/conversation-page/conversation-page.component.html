@@ -75,7 +75,7 @@
           <!--IS SEARCH-->
           <div *ngIf="isSearching">
             <div class="boxChat">
-              <article *ngFor="let person of filteredPersonnes" (click)="selectPerson(person)" >
+              <article *ngFor="let person of filteredPersonnes" (click)="selectPerson(person)">
                 <img src="assets/userblue.png" width="70" height="70">
                 <span class="chatNameLarge">{{person}}</span>
               </article>
@@ -198,8 +198,6 @@
 
           <!-- Toggle requests -->
           <div class="  uk-width-auto navmargin " *ngIf="currentSection === 'requests'">
-
-
             <nav class="uk-navbar-container topPadding">
               <div uk-navbar>
                 <div class="uk-navbar-left">
@@ -209,25 +207,20 @@
                     </li>
                   </ul>
                 </div>
-
               </div>
               <div class="rounded-container">
                 <div class="inner-element">
                   <span>You may know</span>
-
-
                 </div>
                 <div class="inner-element">
                   <span>Spam</span>
-
                 </div>
-
               </div>
             </nav>
 
             <span>You can open a message request for more info on who sent it. They won't be notified you opened
               it.</span>
-            <div class="boxChat">
+            <div class="">
               <article class="uk-comment">
                 <img class="uk-comment-avatar " src="assets/userblue.png" width="70" height="70">
                 <span class="chatNameLarge">Helena</span>
@@ -264,9 +257,15 @@
           </div>
         </div>
       </div>
-      
+
 
     </div>
+
+    <div class="widthFixe heightF navmargin" id="tryMessenger">
+      <h3 class="try navmargin">Try Messenger for Windows</h3>
+    </div>
+
+
   </div>
   <!------------------------------------------>
 
