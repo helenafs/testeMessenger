@@ -10,7 +10,7 @@ export class ConversationPageComponent {
 
 
   searchTerm: string = '';
-  personne: string[] = ['Helena', 'Roihmatoun', 'Jean Christophe', 'Simon', 'Ahmed', 'Alexandre', 'Eridge', 'Aurélien','Walid' ];
+  personne: string[] = [ 'Roihmatoun', 'Jean Christophe', 'Simon', 'Ahmed', 'Alexandre', 'Eridge', 'Aurélien','Walid','Olivier','Luisa', 'Tom','Adrien','Helena' ];
   filteredPersonnes: string[] = [];
   isSearching: boolean = false;
   selectedPersonne: string = '';

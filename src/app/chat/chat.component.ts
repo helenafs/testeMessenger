@@ -55,8 +55,8 @@ export class ChatComponent implements OnInit {
   }
   private addDummyMessages(): void {
     // Add your dummy messages here
-    this.chatService.sendMessage(this.selectedPerson, 'Hello!', false);
-    this.chatService.sendMessage(this.selectedPerson, 'How are you?', true);
+   // this.chatService.sendMessage(this.selectedPerson, 'Hello!', false);
+    //this.chatService.sendMessage(this.selectedPerson, 'How are you?', true);
     // Add more messages as needed
   }
 }
